@@ -9,22 +9,24 @@ public class GameOverScreen : MonoBehaviour
 
     public GameObject gameOverUI;
 
-    public int scene;
-
+    public static bool isDead = false;
     void Start()
     {
-        scene = SceneManager.GetActiveScene().buildIndex;
     }
 
     public void gameOver() 
     {
+        Debug.Log("game Over");
+        // SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+
         gameOverUI.SetActive(true);
         Time.timeScale = 0;
+        isDead = true;
     }
 
     public void respawn()
     {
         gameOverUI.SetActive(false);
-         SceneManager.LoadScene(scene);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }

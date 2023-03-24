@@ -2,9 +2,21 @@ using UnityEngine;
 
 public class PlayerHealth : MonoBehaviour
 {
-    public static float health = 100f;
+    public static float health = 10f;
 
     public GameOverScreen gameManager;
+
+    bool estTue = false;
+
+    void Awake()
+    {
+        gameManager.gameOverUI.SetActive(false);
+        Time.timeScale = 1;
+
+        health = 10f;
+
+        GameOverScreen.isDead = false;
+    }
 
 
     void Update()
@@ -16,9 +28,10 @@ public class PlayerHealth : MonoBehaviour
 
         HealthUIScript.HealthValue = health;
 
-        if (health <= 0f)
+        if (health <= 0f && !estTue)
         {
             Die();
+            estTue = true;
         }
     }
 

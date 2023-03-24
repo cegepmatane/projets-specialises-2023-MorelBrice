@@ -42,7 +42,7 @@ public class Pistol : MonoBehaviour
 
         AmmoUIScript.AmmoValue = remainingBullets;
 
-       if (Input.GetKeyDown(KeyCode.Mouse0) && timeStamp <= Time.time && remainingBullets >= 1)
+       if (Input.GetKeyDown(KeyCode.Mouse0) && timeStamp <= Time.time && remainingBullets >= 1 && GameOverScreen.isDead == false)
        {
             Shoot();
        }
