@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class PlayerHealth : MonoBehaviour
 {
-    public static float health = 10f;
+    public static float health;
 
     public GameOverScreen gameManager;
 
@@ -13,7 +13,7 @@ public class PlayerHealth : MonoBehaviour
         gameManager.gameOverUI.SetActive(false);
         Time.timeScale = 1;
 
-        health = 10f;
+        health = 100f;
 
         GameOverScreen.isDead = false;
     }

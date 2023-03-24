@@ -10,20 +10,27 @@ public class Target : MonoBehaviour
     public NavMeshAgent agent;
     Animator animator;
 
+    public Material MatDefault;
+
+    public Material MatDamage;
 
 
+    void Start()
+    {
+        animator = GetComponent<Animator>();
+    }
 
     void Update()
     {
-        Renderer renderer = GetComponent<Renderer>();  
 
-        animator = GetComponent<Animator>();
+        // animator = GetComponent<Animator>();
 
     }
 
     public void takeDamage(float amount)
     {
-        GetComponent<Renderer>().material.SetColor("_Color", Color.red);
+
+        StartCoroutine(turnRed());
 
         animator.SetTrigger("tookDamage");
 
@@ -39,4 +46,13 @@ public class Target : MonoBehaviour
         // Destroy(gameObject);
         animator.SetBool("isDead", true);
     }
+
+    private IEnumerator turnRed()
+    {
+
+        Debug.Log("red");
+        gameObject.GetComponent<Renderer>().material = MatDamage;
+        yield return new WaitForSeconds(2.0f);
+    }
+
 }

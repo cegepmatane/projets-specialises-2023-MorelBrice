@@ -313,7 +313,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 50
-  agent: {fileID: 0}
+  agent: {fileID: 19463415}
+  MatDefault: {fileID: 2100000, guid: 92fc3cab0a1f1dd42bdd46a803eba9d3, type: 2}
+  MatDamage: {fileID: 2100000, guid: c23fe074bdebfaa4a92f74e448c26d4b, type: 2}
 --- !u!23 &19463418
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -597,6 +599,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 50
   agent: {fileID: 0}
+  MatDefault: {fileID: 2100000, guid: 92fc3cab0a1f1dd42bdd46a803eba9d3, type: 2}
+  MatDamage: {fileID: 2100000, guid: c23fe074bdebfaa4a92f74e448c26d4b, type: 2}
 --- !u!1 &592956740
 GameObject:
   m_ObjectHideFlags: 0
@@ -627,7 +631,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameOverUI: {fileID: 1078204259}
-  scene: 0
 --- !u!4 &592956742
 Transform:
   m_ObjectHideFlags: 0
@@ -928,6 +931,7 @@ GameObject:
   - component: {fileID: 775314022}
   - component: {fileID: 775314023}
   - component: {fileID: 775314024}
+  - component: {fileID: 775314025}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -1093,6 +1097,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameManager: {fileID: 592956741}
+--- !u!114 &775314025
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 775314014}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f202eaeedadb72448a1aa631f0b741e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  paused: 0
 --- !u!1 &795185937
 GameObject:
   m_ObjectHideFlags: 0
@@ -1430,6 +1447,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 366870766979454480, guid: fcc7e72ef9922724c9dbe91fe1141293, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 92fc3cab0a1f1dd42bdd46a803eba9d3, type: 2}
     - target: {fileID: 2070749231621541748, guid: fcc7e72ef9922724c9dbe91fe1141293, type: 3}
       propertyPath: m_LocalRotation.w
       value: 0.7055439
@@ -2283,7 +2304,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1614746711}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 592956741}
+        m_TargetAssemblyTypeName: GameOverScreen, Assembly-CSharp
+        m_MethodName: Menu
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1614746711
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2335,6 +2368,7 @@ GameObject:
   - component: {fileID: 1649321027}
   - component: {fileID: 1649321026}
   - component: {fileID: 1649321030}
+  - component: {fileID: 1649321031}
   m_Layer: 0
   m_Name: Sphere
   m_TagString: Untagged
@@ -2436,6 +2470,22 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1649321031
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1649321025}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d8c9d704e48ca34484f0aee65fbe9c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 50
+  agent: {fileID: 0}
+  MatDefault: {fileID: 2100000, guid: 92fc3cab0a1f1dd42bdd46a803eba9d3, type: 2}
+  MatDamage: {fileID: 2100000, guid: c23fe074bdebfaa4a92f74e448c26d4b, type: 2}
 --- !u!1 &1874850217
 GameObject:
   m_ObjectHideFlags: 0
