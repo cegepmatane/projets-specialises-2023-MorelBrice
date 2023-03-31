@@ -22,6 +22,8 @@ public class GameOverScreen : MonoBehaviour
         gameOverUI.SetActive(true);
         Time.timeScale = 0;
         isDead = true;
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
     }
 
     public void respawn()

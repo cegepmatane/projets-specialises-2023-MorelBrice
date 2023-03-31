@@ -50,7 +50,6 @@ public class Target : MonoBehaviour
     private IEnumerator turnRed()
     {
 
-        Debug.Log("red");
         gameObject.GetComponent<Renderer>().material = MatDamage;
         yield return new WaitForSeconds(2.0f);
     }
