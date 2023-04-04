@@ -21,17 +21,17 @@ public class ChangerImageCle : MonoBehaviour
         //Change the Texture to be the one you define in the Inspector
     }
 
-    public static void fillKey1()
+    public void fillKey1()
     {
         Cle1.texture = keyFilled;
     }
 
-    public static void fillKey2()
+    public void fillKey2()
     {
         Cle2.texture = keyFilled;
     }
 
-    public static void fillKey3()
+    public void fillKey3()
     {
         Cle3.texture = keyFilled;
     }

@@ -6,13 +6,14 @@ public class CollisionItem : MonoBehaviour
     AudioSource Audio;
     public AudioClip pickup;
 
+    ChangerImageCle myInstance;
 
 
     void Start()
     {
         Audio = GetComponent<AudioSource>();    
 
-        ChangerImageCle myInstance = myGameObject.GetComponent<ChangerImageCle>();
+        ChangerImageCle myInstance = GetComponent<ChangerImageCle>();
     }
 
     void Update()
@@ -25,9 +26,9 @@ public class CollisionItem : MonoBehaviour
         if(col.GetComponent<Collider>().name == "DaKey")
         {
             Debug.Log("Item pickup");
-            Audio.PlayOneShot(pickup);
-            fillKey1();
             Destroy(GameObject.Find("DaKey"));
+            Audio.PlayOneShot(pickup);
+            myInstance.fillKey1();
         }
     }
 }
