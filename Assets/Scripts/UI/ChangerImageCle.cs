@@ -19,7 +19,20 @@ public class ChangerImageCle : MonoBehaviour
         Cle2 = GameObject.Find("Cle2").GetComponent<RawImage>();
         Cle3 = GameObject.Find("Cle3").GetComponent<RawImage>();
         //Change the Texture to be the one you define in the Inspector
+    }
+
+    public static void fillKey1()
+    {
         Cle1.texture = keyFilled;
+    }
+
+    public static void fillKey2()
+    {
+        Cle2.texture = keyFilled;
+    }
+
+    public static void fillKey3()
+    {
         Cle3.texture = keyFilled;
     }
 }
