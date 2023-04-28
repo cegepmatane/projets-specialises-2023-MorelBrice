@@ -39,19 +39,21 @@ public class Pistol : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(!PauseMenu.paused)
+        {
+            AmmoUIScript.AmmoValue = remainingBullets;
 
-        AmmoUIScript.AmmoValue = remainingBullets;
+            if (Input.GetKeyDown(KeyCode.Mouse0) && timeStamp <= Time.time && remainingBullets >= 1 && GameOverScreen.isDead == false)
+            {
+                Shoot();
+            }
 
-       if (Input.GetKeyDown(KeyCode.Mouse0) && timeStamp <= Time.time && remainingBullets >= 1 && GameOverScreen.isDead == false)
-       {
-            Shoot();
-       }
-
-       if (Input.GetKeyDown(KeyCode.R))
-       {
-            Reload();
-            gunAudioSource.PlayOneShot(reloading);
-       }
+            if (Input.GetKeyDown(KeyCode.R))
+            {
+                Reload();
+                gunAudioSource.PlayOneShot(reloading);
+            }
+        }
     }
 
     void Shoot ()

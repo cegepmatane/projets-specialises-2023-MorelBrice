@@ -34,27 +34,29 @@ public class FirstPersonAudio : MonoBehaviour
 
     void Reset()
     {
-        // Setup stuff.
-        character = GetComponentInParent<FirstPersonMovement>();
-        groundCheck = (transform.parent ?? transform).GetComponentInChildren<GroundCheck>();
-        stepAudio = GetOrCreateAudioSource("Step Audio");
-        runningAudio = GetOrCreateAudioSource("Running Audio");
-        landingAudio = GetOrCreateAudioSource("Landing Audio");
+        if(!PauseMenu.paused){
+            // Setup stuff.
+            character = GetComponentInParent<FirstPersonMovement>();
+            groundCheck = (transform.parent ?? transform).GetComponentInChildren<GroundCheck>();
+            stepAudio = GetOrCreateAudioSource("Step Audio");
+            runningAudio = GetOrCreateAudioSource("Running Audio");
+            landingAudio = GetOrCreateAudioSource("Landing Audio");
 
-        // Setup jump audio.
-        jump = GetComponentInParent<Jump>();
-        if (jump)
-        {
-            jumpAudio = GetOrCreateAudioSource("Jump audio");
-        }
+            // Setup jump audio.
+            jump = GetComponentInParent<Jump>();
+            if (jump)
+            {
+                jumpAudio = GetOrCreateAudioSource("Jump audio");
+            }
 
-        // Setup crouch audio.
-        crouch = GetComponentInParent<Crouch>();
-        if (crouch)
-        {
-            crouchStartAudio = GetOrCreateAudioSource("Crouch Start Audio");
-            crouchStartAudio = GetOrCreateAudioSource("Crouched Audio");
-            crouchStartAudio = GetOrCreateAudioSource("Crouch End Audio");
+            // Setup crouch audio.
+            crouch = GetComponentInParent<Crouch>();
+            if (crouch)
+            {
+                crouchStartAudio = GetOrCreateAudioSource("Crouch Start Audio");
+                crouchStartAudio = GetOrCreateAudioSource("Crouched Audio");
+                crouchStartAudio = GetOrCreateAudioSource("Crouch End Audio");
+            }
         }
     }
 
@@ -195,3 +197,4 @@ public class FirstPersonAudio : MonoBehaviour
     }
     #endregion 
 }
+
