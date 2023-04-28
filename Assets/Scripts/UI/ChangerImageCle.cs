@@ -1,13 +1,11 @@
-// https://docs.unity3d.com/2018.3/Documentation/ScriptReference/UI.RawImage-texture.html
-
 using UnityEngine;
 using UnityEngine.UI;
 
 public class ChangerImageCle : MonoBehaviour
 {
-    RawImage Cle1;
-    RawImage Cle2;
-    RawImage Cle3;
+    public RawImage Cle1;
+    public RawImage Cle2;
+    public RawImage Cle3;
     //Select a Texture in the Inspector to change to
     public Texture keyOutline;
     public Texture keyFilled;

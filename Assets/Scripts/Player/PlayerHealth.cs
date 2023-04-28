@@ -24,7 +24,7 @@ public class PlayerHealth : MonoBehaviour
 
         Renderer renderer = GetComponent<Renderer>();       
 
-        renderer.material.SetColor("_Color", Color.green);
+        // renderer.material.SetColor("_Color", Color.green);
 
         HealthUIScript.HealthValue = health;
 

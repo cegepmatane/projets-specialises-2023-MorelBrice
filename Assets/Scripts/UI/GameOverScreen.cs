@@ -29,7 +29,8 @@ public class GameOverScreen : MonoBehaviour
     public void respawn()
     {
         gameOverUI.SetActive(false);
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        // SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        SceneManager.LoadScene("dev 1");
     }
 
     public void Menu()

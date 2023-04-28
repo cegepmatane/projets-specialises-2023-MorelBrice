@@ -5,7 +5,7 @@ using UnityEngine.AI;
 
 public class Target : MonoBehaviour
 {
-    public float health = 50f;
+    public float health = 30f;
 
     public NavMeshAgent agent;
     Animator animator;
