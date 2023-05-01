@@ -44,6 +44,6 @@ public class PauseMenu : MonoBehaviour
         Time.timeScale = 1;
         paused = false;
         pauseMenu.SetActive(false);
-
+        Cursor.visible = false;
     }
 }

@@ -7699,10 +7699,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4438425342521083208, guid: f2c3211ba8b6cc243bf2343bfb12c0a8, type: 3}
+      propertyPath: speed
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 4460342839467862722, guid: f2c3211ba8b6cc243bf2343bfb12c0a8, type: 3}
       propertyPath: gameManager
       value: 
       objectReference: {fileID: 592956741}
+    - target: {fileID: 4460342839467862725, guid: f2c3211ba8b6cc243bf2343bfb12c0a8, type: 3}
+      propertyPath: pauseMenu
+      value: 
+      objectReference: {fileID: 1907344522}
     - target: {fileID: 4943611574398754928, guid: f2c3211ba8b6cc243bf2343bfb12c0a8, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -7747,9 +7755,17 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7362582291003888619, guid: f2c3211ba8b6cc243bf2343bfb12c0a8, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7362582291522768387, guid: f2c3211ba8b6cc243bf2343bfb12c0a8, type: 3}
       propertyPath: m_Volume
       value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7362582291522768409, guid: f2c3211ba8b6cc243bf2343bfb12c0a8, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7362582291902036947, guid: f2c3211ba8b6cc243bf2343bfb12c0a8, type: 3}
       propertyPath: m_LocalScale.x
@@ -27766,6 +27782,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 8710600888970763131, guid: 97a4b078c0091b947acd8736a2f47884, type: 3}
   m_PrefabInstance: {fileID: 1476624724}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1907344522 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3065008983697815899, guid: f2c3211ba8b6cc243bf2343bfb12c0a8, type: 3}
+  m_PrefabInstance: {fileID: 594955528}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &1925593869 stripped
 Transform:
